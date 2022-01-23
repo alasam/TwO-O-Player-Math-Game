@@ -1,12 +1,15 @@
 class Question
-
-  attr_accessor :firstNum :secondNum :answer
-
   def initialize
-    @firstNum = rand(1..20)
-    @secondNum = rand(1..20)
-    @answer = @firstNum + @secondNum
+    @num1 = rand(1..20)
+    @num2 = rand(1...20)
+    @sum = @num1 + @num2
   end
 
-end
+  def ask_question(name)
+    puts "#{name}: What is #{@num1} + #{@num2}?"
+  end
 
+  def answer(input)
+    @sum == input
+  end
+end
